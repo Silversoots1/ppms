@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add bank account</title>
+    </head>
+    <body>
+        <div class="change_user">
+            <form action="../pages/save_payment_info.php" method="post"  method="post">
+                <input type="hidden" id="method" name="method" value="bank_account">
+                <p>
+                    <label for="account_number">Account number:</label>
+                    <input type="text" id="account_number" name="account_number" value="{{ user_info['account_number'] }}" />
+                </p>
+                <p>
+                    <label for="routing_number">Routing number:</label>
+                    <input type="text" id="routing_number" name="routing_number" value="{{ user_info['routing_number'] }}" />
+                </p>
+                <p>
+                    <label for="account_holder_name">account holder name:</label>
+                    <input type="text" id="account_holder_name" name="account_holder_name" value="{{ user_info['account_holder_name']}}" />
+                </p>
+                <button type="submit"> Save </button>
+              </form>
+              <button onclick="location.href = '../pages/edit_payment_info.php';">Back</button>
+        </div>
+    </body>
+</html>

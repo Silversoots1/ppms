@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>change user info</title>
+    </head>
+    <body>
+        <div class="change_user">
+            <form action="../pages/save_user_info.php" method="post"  method="post">
+                <p>
+                    <label for="first_name">First name:</label>
+                    <input type="text" id="first_name" name="user_first_name" value= "{{ user_info['user_first_name'] }}" />
+                </p>
+                <p>
+                    <label for="last_name">Last name:</label>
+                    <input type="text" id="last_name" name="user_last_name" value= "{{ user_info['user_last_name'] }}" />
+                </p>
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="{{ user_info['username'] }}" />
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" name="password" />
+                </p>
+                <p>
+                    <label for="date_of_birth">Date of birth:</label>
+                    <input type="date" id="date_of_birth" name="user_date_of_birth" value="{{ user_info['user_date_of_birth'] }}" />
+                </p>
+                <p>
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="user_gender" value="{{ user_info['user_gender'] }}" />
+                </p>
+                <p>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="user_address">{{ user_info['user_address'] }}</textarea>
+                </p>
+                <button type="submit"> Save </button>
+              </form>
+              <button onclick="location.href = '../pages/frontpage.php';">Back</button>
+        </div>
+    </body>
+</html>

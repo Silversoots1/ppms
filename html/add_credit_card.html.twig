@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add credit card</title>
+    </head>
+    <body>
+        <div class="change_user">
+            <form action="../pages/save_payment_info.php" method="post"  method="post">
+                <input type="hidden" id="method" name="method" value="credit_card">
+                <p>
+                    <label for="card_number">card_number:</label>
+                    <input type="text" id="card_number" name="card_number" value="{{ user_info['card_number'] }}" />
+                </p>
+                <p>
+                    <label for="expiration_date">Expiration date:</label>
+                    <input type="date" id="expiration_date" name="user_expiration_date" value="{{ user_info['expiration_date'] }}" />
+                </p>
+                <p>
+                    <label for="cardholder_name">cardholder_name:</label>
+                    <input type="text" id="cardholder_name" name="cardholder_name" value="{{ user_info['cardholder_name']}}" />
+                </p>
+                <button type="submit"> Save </button>
+              </form>
+              <button onclick="location.href = '../pages/edit_payment_info.php';">Back</button>
+        </div>
+    </body>
+</html>
