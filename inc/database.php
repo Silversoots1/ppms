@@ -1,36 +1,41 @@
 <?php
     Class Database
     {
-        private $pdo;
+        private static $pdo;
         
         public function __construct()
         {
-            $this->pdo = new PDO( "mysql:host=localhost;dbname=devel_silversoots","silversoots",'1234');
+            self::createDatabaseConnection();
+        }
+
+        private static function createDatabaseConnection()
+        {
+            self::$pdo = new PDO( "mysql:host=localhost;dbname=devel_silversoots","silversoots",'');
         }
 
         public function getPDO()
         {
-            return $this->pdo;
+            return self::$pdo;
         }
 
         public function terminatePDO(): void
         {
-            $this->pdo = null;
+            self::$pdo = null;
         }
 
-        public function readFromDatabase($sql)
+        public function readFromDatabase($sql): array
         {
             
-            $sth = $this->getPDO()->prepare($sql);
+            $sth = self::getPDO()->prepare($sql);
             $sth->execute();
 
-            $result = $sth->fetch(PDO::FETCH_ASSOC);
+            $result = $sth->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
 
-        public function writeToDatabase($sql)
-        {   
-            $sth = $this->getPDO()->prepare($sql);
+        public function writeToDatabase($sql): void
+        {
+            $sth = self::getPDO()->prepare($sql);
             $sth->execute();
         }
     }

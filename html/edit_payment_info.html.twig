@@ -4,8 +4,22 @@
         <title>Add payment info</title>
     </head>
     <body>
+        <div>
+            <ul id="credit_cards">
+                {% for card in credit_cards %}
+                    <li><p>{{ card }}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <ul id="bank_accounts">
+                {% for account in bank_accounts %}
+                    <li><p>{{ account }}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
         <div class="change_user">
-              <button onclick="location.href = '../pages/add_payment_method.php';">Back</button>
+              <button onclick="location.href = '../pages/frontpage.php';">Back</button>
               <button onclick="location.href = '../pages/add_payment_method.php?card=true';">Credit card</button>
               <button onclick="location.href = '../pages/add_payment_method.php?account=true';">Bank account</button>
         </div>

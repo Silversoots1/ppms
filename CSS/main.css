@@ -1,13 +1,5 @@
 label.login {
     font-size: 1.8rem;
-    color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 14px 0 0 12px;
-    margin: 0;
-    -webkit-transition: .2s all;
-    transition: .2s all;
 }
 div.login {
     position: relative;
@@ -21,7 +13,7 @@ input.login {
 }
 button.login {
     height: 50px;
-    width: 100px;
+    width: auto;
     font-size: 1.5rem;
     font-weight: 500;
     padding: 0 10px;

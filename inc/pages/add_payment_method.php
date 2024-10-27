@@ -1,10 +1,9 @@
 <?php
 include 'header.php';
-require_once ('pages.php');
-require_once ('page.php');
+require_once (getcwd() . '/../inc/template.php');
 
-class AddPaymentInfo extends pages implements page
-{ 
+class AddPaymentInfo extends template
+{
     public function create(): void
     {
         if(isset($_GET['card']) && $_GET['card'] === 'true')

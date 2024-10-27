@@ -1,5 +1,5 @@
 <?php
-class template {
+class Template {
     public function render(string $page_name, array $parameter = []): string
     {
         require_once ('../vendor/autoload.php');

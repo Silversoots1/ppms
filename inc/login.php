@@ -5,7 +5,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     $username = $_POST["username"];
     $password = $_POST["password"];
-    // var_dump(password_hash('1234', PASSWORD_BCRYPT));
     try {
         require_once ('database.php');
         require_once ('login_model.php');
@@ -40,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
         }
 
         $_SESSION['user_id'] = $result['user_id'];
-        $_SESSION['user_id'] = htmlspecialchars($result['username']);
+        $_SESSION['username'] = htmlspecialchars($result['username']);
         $_SESSION['last_regeneration'] = time();
 
         header("Location: ../index.php?login=success");

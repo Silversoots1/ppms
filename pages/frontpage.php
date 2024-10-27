@@ -1,5 +1,5 @@
 <?php
+require_once(getcwd() . '/../inc/pages/frontpage.php');
 
-require_once ('..\inc\frontpage.php');
 $page_class = new Frontpage;
 $page_class->create();

@@ -6,7 +6,7 @@ class Login {
         $query = sprintf('SELECT * FROM users WHERE username = "%s"', $username);
         $database = new Database;
 
-        return $database->readFromDatabase($query);
+        return $database->readFromDatabase($query)[0];
     }
 
     function isUsernameWrong(bool|array $result): bool

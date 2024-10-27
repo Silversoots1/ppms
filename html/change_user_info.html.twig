@@ -8,11 +8,11 @@
             <form action="../pages/save_user_info.php" method="post"  method="post">
                 <p>
                     <label for="first_name">First name:</label>
-                    <input type="text" id="first_name" name="user_first_name" value= "{{ user_info['user_first_name'] }}" />
+                    <input type="text" id="first_name" name="first_name" value= "{{ user_info['first_name'] }}" />
                 </p>
                 <p>
                     <label for="last_name">Last name:</label>
-                    <input type="text" id="last_name" name="user_last_name" value= "{{ user_info['user_last_name'] }}" />
+                    <input type="text" id="last_name" name="last_name" value= "{{ user_info['last_name'] }}" />
                 </p>
                 <p>
                     <label for="username">Username:</label>
@@ -24,19 +24,19 @@
                 </p>
                 <p>
                     <label for="date_of_birth">Date of birth:</label>
-                    <input type="date" id="date_of_birth" name="user_date_of_birth" value="{{ user_info['user_date_of_birth'] }}" />
+                    <input type="date" id="date_of_birth" name="date_of_birth" value="{{ user_info['date_of_birth'] }}" />
                 </p>
                 <p>
                     <label for="gender">Gender:</label>
-                    <input type="text" id="gender" name="user_gender" value="{{ user_info['user_gender'] }}" />
+                    <input type="text" id="gender" name="gender" value="{{ user_info['gender'] }}" />
                 </p>
                 <p>
                     <label for="address">Address:</label>
-                    <textarea id="address" name="user_address">{{ user_info['user_address'] }}</textarea>
+                    <textarea id="address" name="address">{{ user_info['address'] }}</textarea>
                 </p>
                 <button type="submit"> Save </button>
               </form>
-              <button onclick="location.href = '../pages/frontpage.php';">Back</button>
+              <button onclick="location.href = '../index.php';">Back</button>
         </div>
     </body>
 </html>
