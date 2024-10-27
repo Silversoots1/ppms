@@ -1,59 +1,15 @@
-devel_silversoots
-
-insert into users(username, password)
-VALUES('test', '$2y$10$DRRRJ56qqZe.k/sTW8RmruQQSTGLWge2W53PkwvzKRNZGOJc8klp6');
+CREATE USER devel_silversoots
 
 CREATE TABLE users
 ( user_id int PRIMARY KEY AUTO_INCREMENT,
   username varchar(25) NOT NULL,
-  password varchar(60) NOT NULL)
-
-  ALTER TABLE users
-  ADD first_name varchar(25) NOT NULL,
-  ADD last_name varchar(25) NOT NULL,
-  ADD date_of_birth DATE,
-  ADD gender varchar(25) NOT NULL,
-  ADD address varchar(255);
-
-payment methods
- id user id username payment mehthod Number status
-
-CREATE TABLE payment
-( id int PRIMARY KEY AUTO_INCREMENT,
-  user_id int NOT NULL,
-  username varchar(25) NOT NULL,
-  payment_method varchar(60),
-  card_number varchar(60),
-  expiration_date DATE,
-  cardholder_name varchar(60),
-  account_number varchar(60),
-  routing_number varchar(60),
-  accountholder_name varchar(60),
-  status varchar(25)
+  password varchar(60) NOT NULL,
+  first_name varchar(25) NOT NULL,
+  last_name varchar(25) NOT NULL,
+  date_of_birth DATE,
+  gender varchar(25) NOT NULL,
+  address varchar(255)
 );
-
-
-  
-GRANT ALL
-ON devel_silversoots.*
-TO 'silversoots'@'%'
-WITH GRANT OPTION;
-
-
-
-
-GRANT ALL
-TO 'silversoots'
-WITH GRANT OPTION;
-
-
-GRANT ALL PRIVILEGES
-ON devel_silversoots.*
-TO 'root'@'%'
-WITH GRANT OPTION;
-
-GRANT ALL PRIVILEGES ON *.* TO 'silversoots'@'localhost' WITH GRANT OPTION;
-
 
 CREATE TABLE credit_card
 (
